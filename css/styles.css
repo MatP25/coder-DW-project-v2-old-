@@ -18,14 +18,14 @@ a:visited {
 .body {
     display: grid;
     /* mobile view */
-    grid-template-columns: 1fr;
-    grid-template-rows: 200px 50px 1fr 1fr 1fr 320px;
-    grid-template-areas:    "hd"
-                            "nv"
-                            "mn"
-                            "mn"
-                            "mn"
-                            "ft";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 60px 1fr 1fr 1fr 320px;
+    grid-template-areas:    "hd hd"
+                            "nv nv"
+                            "mn mn"
+                            "mn mn"
+                            "mn mn"
+                            "ft ft";
 }
 /* BODY - END */
 
@@ -46,7 +46,10 @@ a:visited {
 /* NAV - START */
 .nav {
     grid-area: nv;
-    border: 1px solid;
+    background-color: rgb(103, 156, 192);
+
+    position: sticky;
+    top:0;
 }
 
 .menu-list {
@@ -60,6 +63,12 @@ a:visited {
 .main {
     grid-area: mn;
     border: 1px solid;
+
+    padding: 5px;
+}
+
+.div-card-small {
+    
 }
 /* MAIN - END */
 
@@ -70,6 +79,7 @@ a:visited {
     border: 1px solid;
     display: flex;
     flex-direction: column;
+    padding: 5px;
 }
 
 .footer-left {
