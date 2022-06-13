@@ -5,3 +5,85 @@
     font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 
 }
+
+.body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 100px 1fr 1fr 1fr 320px;
+    grid-template-areas:    "hd"
+                            "nv"
+                            "mn"
+                            "mn"
+                            "mn"
+                            "ft";
+}
+
+.header {
+    grid-area: hd;
+    border: 1px solid;
+}
+
+.nav {
+    grid-area: nv;
+    border: 1px solid;
+}
+
+.main {
+    grid-area: mn;
+    border: 1px solid;
+}
+
+.footer {
+    grid-area: ft;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer-left {
+    
+}
+
+.footer-left h4 {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.contact-icons-ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+.icons-li {
+    margin: 5px;
+}
+
+.icons {
+    max-width: 35px;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.map-container {
+    position: relative;
+    height:100%;
+    overflow: hidden;
+    padding: 56.25%;
+}
+.map-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
