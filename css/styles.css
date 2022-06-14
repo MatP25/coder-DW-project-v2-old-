@@ -155,14 +155,16 @@ li a:hover {
 .footer-left {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     border: 1px solid;
+    text-align: center;
+    flex-direction: column;
 }
 
-.footer-left h4 {
-    display: flex;
-    justify-content: center;
+.h4-contacto {
+    display: block;
     text-align: center;
-    
+    font-size: 1.3rem;
 }
 
 .contact-icons-ul {
@@ -171,16 +173,23 @@ li a:hover {
     flex-direction: row;
     justify-content: left;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
     
 }
 
 .icons-li {
     margin: 5px;
+    padding: 2px;
+    text-align: center;
+    width: 100%;
 }
 
 .icons {
     max-width: 35px;
+}
+
+.footer-link {
+    display: block;
 }
 
 .footer-right {
@@ -228,6 +237,7 @@ li a:hover {
 
     .contact-icons-ul {
         flex-direction: column;
+
     }
 
     .footer-right {
