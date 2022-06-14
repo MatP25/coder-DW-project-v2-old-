@@ -139,7 +139,6 @@ li a:hover {
     width: 100%;
     overflow: hidden;
 }
-
 /* MAIN - END */
 
 
@@ -154,12 +153,15 @@ li a:hover {
 }
 
 .footer-left {
+    display: flex;
+    flex-wrap: wrap;
     border: 1px solid;
 }
 
 .footer-left h4 {
     display: flex;
     justify-content: center;
+    text-align: center;
     
 }
 
@@ -183,7 +185,9 @@ li a:hover {
 
 .footer-right {
     display: flex;
+    justify-content: center;
     flex-direction: column;
+    text-align: center;
 }
 
 .map-container {
@@ -197,3 +201,36 @@ li a:hover {
 }
 /* FOOTER - END */
 
+@media screen and (max-width:576px){
+    .header h1 a {
+        font-size: 1.9rem;
+    }
+}
+
+@media screen and (min-width:576px){
+    .div-card-small {
+        flex-basis: 30%;
+    }
+
+    .div-card-big {
+        flex-basis: 45%;
+    }
+}
+
+@media screen and (min-width:768px){
+    .footer {
+        flex-direction: row;
+    }
+
+    .footer-left {
+        width: 25%;
+    }
+
+    .contact-icons-ul {
+        flex-direction: column;
+    }
+
+    .footer-right {
+        width: 75%;
+    }
+}
