@@ -23,7 +23,11 @@ li a:hover {
     text-shadow: 1px 1px 5px;
 }
 
-
+h4 {
+    display: block;
+    text-align: center;
+    font-size: 1.3rem;
+}
 
 /* BODY - START */
 .body {
@@ -156,15 +160,8 @@ li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 1px solid;
     text-align: center;
     flex-direction: column;
-}
-
-.h4-contacto {
-    display: block;
-    text-align: center;
-    font-size: 1.3rem;
 }
 
 .contact-icons-ul {
@@ -184,8 +181,12 @@ li a:hover {
     width: 100%;
 }
 
-.icons {
-    max-width: 35px;
+.fa-brands {
+    font-size: 40px;
+}
+
+.fa-solid {
+    font-size: 40px;
 }
 
 .footer-link {
@@ -214,6 +215,9 @@ li a:hover {
     .header h1 a {
         font-size: 1.9rem;
     }
+    .footer-link {
+        font-size: 14px;
+    }
 }
 
 @media screen and (min-width:576px){
@@ -237,7 +241,6 @@ li a:hover {
 
     .contact-icons-ul {
         flex-direction: column;
-
     }
 
     .footer-right {
