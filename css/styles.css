@@ -220,11 +220,22 @@ li {
 
 /* imgs in servicios.html */
 .img-container-servicios {
-    
+    height: 400px;
+    max-width: 700px;
+    flex-basis: 45%;
+    position: relative;
+}
+
+.img-servicios-overlay {
+
 }
 
 .img-container-servicios img {
+    object-fit: cover;
     width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 /* aside - contains imgs (servicios.html & acercade.html) */
@@ -232,14 +243,25 @@ li {
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 auto;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: space-evenly;
+    gap: 15px;
     padding: 5px;
+    margin: 5px;
 }
 
 /* imgs in acercade.html */
+.img-container-nosotros {
+    height: 400px;
+    flex-basis: 30%;
+    position: relative;
+}
+
 .img-container-nosotros img {
+    object-fit: cover;
     width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 /* section acercade.html */
@@ -479,6 +501,13 @@ input, textarea {
     }
 }
 
+@media screen and (max-width:768px) {
+    .img-container-servicios {
+        flex-basis: 90%;
+    }
+    
+}
+
 @media screen and (min-width:768px){
     .footer {
         flex-direction: row;
@@ -518,6 +547,12 @@ input, textarea {
 
     .contact-icons-ul {
         flex-direction: row;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .img-container-nosotros {
+        flex-basis: 90%;
     }
 }
 
