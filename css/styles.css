@@ -34,11 +34,14 @@ h1, h2, h3, h4, h5, p, span, a {
 
 h2  {
     padding: 5px 25px;
-    box-shadow: rgba(0, 0, 0, 0.9) 0px 3px 6px;
+    border-bottom: 1px solid;
+    -webkit-box-shadow: 0px 9px 6px -8px #000000; 
+    box-shadow: 0px 9px 6px -8px #000000;
     margin-bottom: 10px;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.71);
     font-size: 1.8rem;
     text-align: center;
+    background: rgb(103, 156, 192);
 }
 
 li {
@@ -66,7 +69,7 @@ li {
 .header {
     grid-area: hd;
     border-bottom: 2px solid;
-    background-image: url(../assets/imgs/header-bg-2-small.jpg);
+    background-image: url(../assets/imgs/backgrounds/header-bg-2-small.jpg);
     background-position:center;
     background-size:cover;
     background-repeat: no-repeat;
@@ -129,6 +132,7 @@ li {
 /* NAV - END */
 
 /* MAIN - START */
+/* main layout and style */
 .main {
     grid-area: mn;
     display: flex;
@@ -137,10 +141,19 @@ li {
     flex-wrap: wrap;
     align-items: stretch;
     padding: 5px;
+    background: rgb(135,147,149);
+    background: linear-gradient(0deg, rgba(135,147,149,1) 0%, rgba(29,55,73,1) 100%);
 }
 
+/* widget with google reviews */
+.google-review-widget {
+    margin-top: 5px;
+    width: 100%;
+}
+
+/* widget with google reviews */
 .taggbox-container {
-    padding-top: 20px;
+    padding: 10px;
     max-height: 600px;
     background-image: url(../assets/imgs/backgrounds/background1-medium.jpg);
     background-repeat: no-repeat;
@@ -148,6 +161,7 @@ li {
     background-position: center;
 }
 
+/* cards - index */
 .div-card-small {
     background-color:azure;
     flex-grow: 1;
@@ -157,9 +171,10 @@ li {
     border-radius: 10px 10px 2px 2px;
 }
 
+/* cards - index */
 .div-card-big {
     background-color:azure;
-    flex-grow: 1;
+    flex-grow: 2;
     flex-basis: 80%;
     margin: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -167,17 +182,19 @@ li {
     
 }
 
+/* cards - index */
 .card-img-container img {
     width: 100%;
     overflow: hidden;
     border-radius: 10px 10px 0 0;
 }
 
+/* section servicios.html layout */
 .section-servicios {
     margin: 5px;
     width: 100%;
     padding: 10px 30px;
-    background: rgba(255, 46, 0, 0.7);
+    background:rgb(123, 138, 147, 0.7);
     display: flex;
     flex-wrap: wrap;
 }
@@ -186,6 +203,7 @@ li {
     width: 100%;
 }
 
+/* list layout */
 .section-servicios ul {
     display: flex;
     flex-wrap: wrap;
@@ -193,51 +211,64 @@ li {
     list-style: none;
 }
 
+/* list elements */
 .section-servicios ul li {
     margin: 5px;
     padding: 10px;
     border: 1px solid black;
 }
 
-.div-img img {
+/* imgs in servicios.html */
+.img-container-servicios {
+    
+}
+
+.img-container-servicios img {
     width: 100%;
 }
 
+/* aside - contains imgs (servicios.html & acercade.html) */
 .aside-img-container {
     display: flex;
     flex-wrap: wrap;
+    flex: 1 1 auto;
     justify-content: space-between;
     gap: 10px;
     padding: 5px;
 }
 
-.div-img-servicios img {
+/* imgs in acercade.html */
+.img-container-nosotros img {
     width: 100%;
 }
 
+/* section acercade.html */
 .section-acercade {
     margin: 5px;
     width: 100%;
     padding: 10px 30px;
-    background: rgba(255, 46, 0, 0.7)
+    background: rgb(123, 138, 147, 0.8);
 }
 
 .section-acercade p {
     font-weight:lighter;
 }
 
+/* section form.html */
 .section-form {
     margin: 5px;
     width: 100%;
-    background: rgba(255, 46, 0, 0.7);
+    background: rgb(123, 138, 147, 0.2);
     display: flex;
     flex-direction: column;
 }
 
+/* hide decorative img in mobile view */
 .side-img-form {
     display: none;
 }
 
+/* decorative imgs in form.html */
 .side-img-form #sideimg-2 {
     width: 100%;
     border-radius: 25px 0 0 25px;
@@ -254,6 +285,7 @@ li {
     box-shadow: 2px 0 8px black;
 }
 
+/* form.html layout */
 form {
     padding: 5px;
     border-radius: 4px;
@@ -269,7 +301,6 @@ input, textarea {
     border: 1px solid black;
     border-radius: 3px;
 }
-
 
 .form-input:focus, textarea:focus {
     border: 2px solid rgb(200, 10, 10);
@@ -292,6 +323,7 @@ input, textarea {
     box-shadow: 0 0 3px 0;
 }
 
+/* gallery container in trabajos.html */
 .gallery-div {
     display: flex;
     flex-wrap: wrap;
@@ -300,6 +332,7 @@ input, textarea {
     margin: 5px 5px 10px 5px;
 }
 
+/* list element - contains img - trabajos.html*/
 .gallery-div li {
     height: 400px;
     cursor: pointer;
@@ -316,11 +349,13 @@ input, textarea {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+/* stop items in last row from occupying all columns */
 .gallery-div::after {
     content: "";
     flex-grow: 999;
 }
 
+/* overlay that appears on img hover - trabajos.html*/
 .img-overlay {
     position: absolute;
     width: 100%;
@@ -462,7 +497,7 @@ input, textarea {
     }
 
     .header {
-        background-image: url(../assets/imgs/header-bg-2-medium.jpg);
+        background-image: url(../assets/imgs/backgrounds/header-bg-2-medium.jpg);
     }
 
     .section-form {
@@ -487,12 +522,32 @@ input, textarea {
 }
 
 @media screen and (min-width:1200px) {
+
+    .header {
+        background-image: url(../assets/imgs/backgrounds/header-bg-2-large.jpg);
+    }
+
+    .taggbox-container {
+        background-image: url(../assets/imgs/backgrounds/background1-xlarge.jpg);
+    }
+
+    .main {
+        gap: 10px;
+        padding: 5px 15px
+    }
     .div-card-small {
         flex-basis: 15%;
     }
 
     .div-card-big {
         flex-basis: 30%;
+        max-width: 600px;
     }
 
+}
+
+@media screen and (min-width:1400px) {
+    .taggbox-container {
+        overflow: hidden;
+    }
 }
