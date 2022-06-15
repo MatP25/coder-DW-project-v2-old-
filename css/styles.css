@@ -2,7 +2,6 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
 
 /* GENERAL */
@@ -18,14 +17,9 @@ h1 a {
 }
 
 li a:hover {
-    background-color: hsl(0, 0%, 15%);
+    background-color: rgba(0, 48, 73);
     color: white;
     text-shadow: 1px 1px 5px;
-}
-
-h2 {
-    font-size: 1.8rem;
-    text-align: center;
 }
 
 h4 {
@@ -34,6 +28,22 @@ h4 {
     font-size: 1.3rem;
 }
 
+h1, h2, h3, h4, h5, p, span, a {
+    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+
+h2  {
+    padding: 5px 25px;
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 3px 6px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.71);
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+li {
+    font-family: 'Open Sans', sans-serif;
+}
 
 /* BODY - START */
 .body {
@@ -68,11 +78,11 @@ h4 {
 }
 
 .header h1 a{
-    font-size: 2.8rem;
+    font-size: 3rem;
     font-family: 'Signika', sans-serif;
     display: inline-block;
     color: azure;
-    text-shadow:  1px 1px black;
+    text-shadow:  2px 2px 4px black;
 }
 /* HEADER - END */
 
@@ -81,9 +91,11 @@ h4 {
 .nav {
     grid-area: nv;
     background-color: rgb(103, 156, 192);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 15px 15px -15px;
 
     position: sticky;
     top:0;
+    z-index: 100;
 }
 
 .menu-list {
@@ -92,6 +104,7 @@ h4 {
     justify-content: space-evenly;
     flex-wrap: wrap;
     list-style: none;
+    padding: 2px;
 }
 
 .menu-item {
@@ -101,13 +114,11 @@ h4 {
     text-align: center;
     text-shadow: 1px 1px 4px;
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin: 1px;
     border: 1px solid black;
     border-radius: 2px;
-
     box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
 }
 
 .menu-item a {
@@ -128,13 +139,22 @@ h4 {
     padding: 5px;
 }
 
+.taggbox-container {
+    padding-top: 20px;
+    max-height: 600px;
+    background-image: url(../assets/imgs/backgrounds/background1-medium.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
 .div-card-small {
     background-color:azure;
     flex-grow: 1;
     flex-basis: 40%;
     margin: 5px;
-    -webkit-box-shadow: 4px 4px 2px -2px rgba(0,0,0,0.77);
-    box-shadow: 4px 4px 2px -2px rgba(0,0,0,0.77);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px 10px 2px 2px;
 }
 
 .div-card-big {
@@ -142,22 +162,50 @@ h4 {
     flex-grow: 1;
     flex-basis: 80%;
     margin: 5px;
-    -webkit-box-shadow: 4px 4px 2px -2px rgba(0,0,0,0.77);
-    box-shadow: 4px 4px 2px -2px rgba(0,0,0,0.77);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px 10px 2px 2px;
+    
 }
 
 .card-img-container img {
     width: 100%;
     overflow: hidden;
+    border-radius: 10px 10px 0 0;
 }
 
 .section-servicios {
     margin: 5px;
     width: 100%;
+    padding: 10px 30px;
+    background: rgba(255, 46, 0, 0.7);
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.aside-img-container-servicios {
+.section-servicios h2{
+    width: 100%;
+}
+
+.section-servicios ul {
     display: flex;
+    flex-wrap: wrap;
+    font-weight:lighter;
+    list-style: none;
+}
+
+.section-servicios ul li {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.div-img img {
+    width: 100%;
+}
+
+.aside-img-container {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 10px;
     padding: 5px;
@@ -170,18 +218,20 @@ h4 {
 .section-acercade {
     margin: 5px;
     width: 100%;
+    padding: 10px 30px;
+    background: rgba(255, 46, 0, 0.7)
+}
+
+.section-acercade p {
+    font-weight:lighter;
 }
 
 .section-form {
     margin: 5px;
     width: 100%;
-    background-color:hsl(202, 17%, 69%);
+    background: rgba(255, 46, 0, 0.7);
     display: flex;
     flex-direction: column;
-}
-
-.form h2 {
-    margin: 10px;
 }
 
 .side-img-form {
@@ -241,17 +291,71 @@ input, textarea {
     background-color: gray;
     box-shadow: 0 0 3px 0;
 }
+
+.gallery-div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    margin: 5px 5px 10px 5px;
+}
+
+.gallery-div li {
+    height: 400px;
+    cursor: pointer;
+    flex: 1 1 auto;
+    position: relative;
+}
+
+.gallery-div li img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.gallery-div::after {
+    content: "";
+    flex-grow: 999;
+}
+
+.img-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(57, 57, 57, 0.502);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: all 0.2s 0.1s ease-in-out;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+
+    /* center content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-div li:hover .img-overlay {
+    transform: scale(1);
+    transition: 0.5s;
+}
+
 /* MAIN - END */
 
 
 /* FOOTER - START */
 .footer {
-    background-color: #414756;
+    background-color: rgb(103, 156, 192);
     grid-area: ft;
     border-top: 2px solid;
     display: flex;
     flex-direction: column;
     padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px -20px 15px -15px;
 
     
 }
@@ -290,6 +394,7 @@ input, textarea {
 
 .footer-link {
     display: inline-block;
+    padding: 1px 3px;
 }
 
 .footer-right {
@@ -299,9 +404,14 @@ input, textarea {
     text-align: center;
 }
 
+.footer-right h4, h5 {
+    margin-bottom: 4px;
+}
+
 .map-container {
     width: 100%;
     overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .map-iframe {
     width: 100%;
@@ -310,14 +420,18 @@ input, textarea {
 }
 /* FOOTER - END */
 
+
+/* MEDIA QUERIES */
 @media screen and (max-width:576px){
     .header h1 a {
         font-size: 1.9rem;
     }
+
     .footer-link {
         font-size: 16px;
         text-align: center;
     }
+
 }
 
 @media screen and (min-width:576px){
@@ -380,4 +494,5 @@ input, textarea {
     .div-card-big {
         flex-basis: 30%;
     }
+
 }
